@@ -4,9 +4,9 @@
 В данной задаче предлагается проанализировать массив данных с информаций о людях с использованием стримов из библиотеки `Stream API`. 
 
 Для работы необходимо подготовить несколько классов, а именно:
-1. `src.Sex`, содержащий типы полов:
+1. `Sex`, содержащий типы полов:
 ```java
-public enum src.Sex {
+public enum Sex {
     MAN,
     WOMAN
 }
@@ -23,7 +23,7 @@ public enum Education {
 3. `Person`, содержащий информацию об имени, возрасте, поле и образовании человека:
 
 ```java
-import src.Sex;
+import Sex;
 
 class Person {
     private String name;
@@ -89,7 +89,7 @@ for (int i = 0; i < 10_000_000; i++) {
                 names.get(new Random().nextInt(names.size())),
                 families.get(new Random().nextInt(families.size())),
                 new Random().nextInt(100),
-                src.Sex.values()[new Random().nextInt(src.Sex.values().length)],
+                Sex.values()[new Random().nextInt(Sex.values().length)],
                 Education.values()[new Random().nextInt(Education.values().length)])
     );
 }
